@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.static {
+    width: 200px;
+    height: 100vh;
+    top:0;
+    left:100px;
+    background: #1b2424;
+    position: absolute;
+    z-index:-2;
+  }
+  .line {
+    width:7px;
+    background-color:#bda800;
+    height:100vh;
+    left:196.5px;
+    top:0;
+    position: absolute;
+    z-index:-2;
+  }
+  .mic{
+    top:47vh;
+    left:308px;
+    position: absolute;
+    color:red;
+  }
+  .mover {
+    width: 100px;
+    height: 100px;
+    left:150px;    
+    background: green;
+    z-index:1;
+    top:-90px;
+    margin: 0 auto;
+    border-radius: 10px;
+    position: absolute;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+  }
+  @keyframes mymove {
+    0%   {top: -20vh;}
+  
+    100% {top: 100vh;}
+  }
+  .bumper {
+    height:18px;
+    width:110px;
+    margin-left:-5px;
+    background-color:grey;
+    border-radius:8px;
+    z-index:-1;
+  }
+  .front {
+    margin-top:-7px;
+  }
+  .rear {
+    margin-top:87px;
+  }
+#map {
+    height: 100%;
+    width: 25vw;
+    margin-left:20px;
+    z-index:-1;
+}
+.gm-style-cc { display:none; }
+a[href^="http://maps.google.com/maps"],
+a[href^="https://maps.google.com/maps"],
+a[href^="https://www.google.com/maps"] {
+    display: none !important;
+}
+.gm-bundled-control .gmnoprint {
+    display: block;
+}
+.gmnoprint:not(.gm-bundled-control) {
+    display: none;
+}

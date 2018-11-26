@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sinusoidal Rumble Strip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZcCHgNxumuffR0C2uAg1B8lnFB4aqJp4&"></script>
+  <script>
+    function initialize() {
+      var mapDiv = document.getElementById('map');
+      var mapOptions = {
+        mapTypeId: 'satellite',
+        zoom: 20,
+        center: {lat: 44.551186, lng: -123.289596},
+        disableDefaultUI: true,
+        gestureHandling: 'none',
+        zoomControl: false
+      };
+      var map = new google.maps.Map(mapDiv, mapOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+</head>
+<body>
+  <div id="map"></div>
+  <div class="static"></div>
+  <div class="line"></div>
+  <div class="mic"><i class="fas fa-microphone fa-2x"></i></div>
+  <div class="mover"></div>
+  <div class="bumper mover front"></div>
+  <div class="bumper mover rear"></div>
+</body>
+</html>
